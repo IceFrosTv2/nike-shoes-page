@@ -1,13 +1,237 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>nike-shoes-page</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <title>nike-shoes-page</title>
+</head>
+<body class="font-display text-xs">
+
+<header
+  class="flex justify-between items-center px-4 py-[19px]
+  md:px-[43px]
+  border-b border-b-neutral-300"
+>
+  <svg
+    id="logo"
+
+  ></svg>
+  <nav class="hidden sm:flex">
+    <ul class="flex list-none gap-6">
+      <li>
+        <a
+          href="#"
+        >
+          Men
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+        >
+          Women
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+        >
+          Kids
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+        >
+          Jordan
+        </a>
+      </li>
+      <li>
+        <a
+          href="/"
+        >
+          Sale
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div class="flex gap-4 items-center">
+    <label class="relative">
+      <input
+        class="relative w-34 h-[26px] py-[5px] pl-[38px] pr-5 items-center rounded-4xl
+        bg-(--second-color)
+        placeholder:text-neutral-300 animation
+        focus:outline-none focus:w-50 focus:md:w-64"
+        name="Search input"
+        placeholder="Search"
+      />
+      <svg id="search"></svg>
+    </label>
+    <svg id="favorite"></svg>
+    <svg id="shoppingCart"></svg>
+    <svg id="menu"></svg>
+  </div>
+</header>
+<main
+  class="grid grid-cols-1 mt-10 pb-12 px-4 gap-3
+  sm:grid-cols-[auto_1fr] sm:grid-rows-[auto_1fr]
+  lg:gap-6 lg:max-xl:grid-cols-[1fr_auto]"
+>
+  <!--  Title Section -->
+  <section
+    class="flex flex-col gap-3 max-w-96
+  sm:order-2"
+  >
+    <div class="flex flex-col gap-1">
+      <h1 class="text-xl font-bold">Nike Air Force 1 ‘07</h1>
+      <h2 class="  text-neutral-500">Women’s Shoe</h2>
+    </div>
+    <span>$115</span>
+  </section>
+  <!--  Image section -->
+  <section
+    class="relative grid grid-cols-1 gap-3 place-items-center
+  sm:order-1 sm:row-span-2
+  lg:grid-cols-2 lg:grid-rows-[min-content] lg:place-items-start"
+  >
+    <figure
+      class='relative after:absolute
+      after:content-["★_Highly_Rated"]
+      after:top-4 after:left-4 after:items-center
+      after:py-1 after:pl-2 after:pr-3 after:bg-white after:rounded-full'
+    >
+      <img
+        class="image-width animation"
+        src="src/images/image_white_1.png"
+        alt="Shoes photo"
+        loading="lazy"
+      />
+    </figure>
+    <img
+      class="image-width animation"
+      src="src/images/image_white_2.png"
+      alt="Shoes photo"
+      loading="lazy"
+    />
+    <img
+      class="image-width animation"
+      src="src/images/image_white_3.png"
+      alt="Shoes photo"
+      loading="lazy"
+    />
+    <img
+      class="image-width animation"
+      src="src/images/image_white_4.png"
+      alt="Shoes photo"
+      loading="lazy"
+    />
+  </section>
+  <!--  Info, size and buttons section -->
+  <section
+    class="flex flex-col gap-6 max-w-96 justify-self-center
+  sm:order-3 sm:justify-self-start"
+  >
+    <!--    Choose color -->
+    <div class="flex gap-2">
+      <button
+        class="cursor-pointer"
+        type="button"
+        aria-label="Choose white color"
+      >
+        <img
+          class="w-13 active-color "
+          src="src/images/image_white_1.png"
+          alt="White shoe"
+        />
+      </button>
+      <button
+        class="cursor-pointer"
+        type="button"
+        aria-label="Choose black color"
+      >
+        <img
+          class="w-13 "
+          src="./src/images/image_black_1.png"
+          alt="Black shoe"
+        />
+      </button>
+    </div>
+    <!--    Choose size -->
+    <section class="flex flex-col gap-2">
+      <article class="flex justify-between">
+        <h3>Select Size</h3>
+        <a
+          class="text-neutral-500 border-b border-b-transparent transition
+          active:border-b-neutral-500
+          hover:md:border-b-neutral-500"
+          href="https://www.salomon.com/en-us/sizingchart"
+        >
+          Size Guide
+        </a>
+      </article>
+      <article
+        id="choose-size"
+        class="grid grid-cols-3 gap-2"
+      ></article>
+    </section>
+    <section class="flex flex-col gap-2">
+      <button
+        class="button bg-(--black-button) text-white"
+        type="button"
+      >
+        Add to Bag
+      </button>
+      <button
+        class="button flex justify-center relative gap-1 items-center"
+        type="button"
+      >
+        <span>Favorite</span>
+        <svg id="favorite__button"></svg>
+      </button>
+    </section>
+    <section class="flex flex-col gap-7">
+      <article class="flex flex-col gap-2">
+        <h3 class="font-bold">Shipping</h3>
+        <div>You'll see our shipping options at checkout.</div>
+      </article>
+      <article>
+      <span>
+        The radiance lives on in the Nike Air Force 1 ’07, the b-ball icon that
+        puts a fresh spin on what you know best: crisp leather, bold colors and
+        the perfect amount of flash to make you shine. A subtle platform gives
+        you just the right amount of height.
+      </span>
+        <br><br>
+        <ul class="list-disc ml-4">
+          <li>
+            Shown:White/White/White/White
+          </li>
+          <li>
+            Style:DD8959-100
+          </li>
+        </ul>
+      </article>
+      <article>
+        <a
+          class="font-bold border-b border-b-black"
+          href="#"
+        >
+          View Product Details
+        </a>
+      </article>
+    </section>
+  </section>
+</main>
+<footer class="p-6.5 text-center">
+  <span class="text-neutral-500">©2025Nike, Inc. All Rights Reserved</span>
+</footer>
+<!--____________________________________________________________________-->
+<script
+  type="module"
+  src="/src/main.js"
+></script>
+</body>
 </html>

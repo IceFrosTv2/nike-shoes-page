@@ -1,1 +1,50 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url("./fonts/HelveticaNeueMedium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url("./fonts/HelveticaNeueBold.woff2") format("woff2");
+  font-weight: 700;
+}
+
+.active-color {
+  @apply border border-black rounded-sm
+}
+
+.size-block {
+  @apply flex-1 p-2.5 border rounded-sm cursor-pointer
+  border-(--size-border) text-center
+  disabled:bg-neutral-100 disabled:text-(--size-border)
+  disabled:cursor-not-allowed
+}
+
+.button {
+  @apply py-2 px-2.5 border rounded-full cursor-pointer
+}
+
+.animation {
+  @apply transition-all duration-300 active:scale-110 hover:md:scale-110
+}
+
+@theme {
+  --second-color: #F7F7F7;
+  --size-border: #C1C1C1;
+  --black-button: #111;
+}
+
+@layer utilities {
+  .font-display {
+    font-family: "Helvetica Neue", sans-serif;
+    font-weight: 500;
+  }
+
+  .image-width {
+    max-width: 396px;
+    width: 100%;
+  }
+}
