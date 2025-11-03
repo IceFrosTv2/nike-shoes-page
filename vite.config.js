@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import path from "path";
 
 export default defineConfig ( {
+  base: './', // делаем пути в dist относительными
   resolve: {
     alias: {
       "@": path.resolve ( __dirname, "./src" ),
