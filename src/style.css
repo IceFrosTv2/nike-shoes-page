@@ -4,12 +4,14 @@
   font-family: 'Helvetica Neue';
   src: url("./fonts/HelveticaNeueMedium.woff2") format("woff2");
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Helvetica Neue';
   src: url("./fonts/HelveticaNeueBold.woff2") format("woff2");
   font-weight: 700;
+  font-display: swap;
 }
 
 .active-color {
@@ -19,8 +21,13 @@
 .size-block {
   @apply flex-1 p-2.5 border rounded-sm cursor-pointer
   border-(--size-border) text-center
+  active:enabled:border-black md:hover:enabled:border-black
   disabled:bg-neutral-100 disabled:text-(--size-border)
   disabled:cursor-not-allowed
+}
+
+.active-size {
+  @apply  bg-black text-white border-black
 }
 
 .button {
@@ -28,13 +35,24 @@
 }
 
 .animation {
-  @apply transition-all duration-300 active:scale-110 hover:md:scale-110
+  @apply transition-all duration-300
+  motion-reduce:transition-none motion-reduce:transform-none
+}
+
+.animation.scale {
+  @apply active:scale-110 hover:md:scale-110 cursor-pointer
+}
+
+.header__link {
+  @apply border-b border-b-transparent
+  active:border-b-black lg:hover:border-b-black
 }
 
 @theme {
   --second-color: #F7F7F7;
   --size-border: #C1C1C1;
   --black-button: #111;
+  --background-mobile-menu: rgba(179, 179, 179, 0.50);
 }
 
 @layer utilities {
