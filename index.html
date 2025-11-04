@@ -28,8 +28,8 @@
     rel="manifest"
     href="./site.webmanifest"
   >
-  <script type="module" crossorigin src="./assets/index-Bb2sOHBW.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-Bfc1nK1f.css">
+  <script type="module" crossorigin src="./assets/index-B2c3Mzrh.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-VjZFxGNV.css">
 </head>
 <body class="font-display text-xs">
 
@@ -123,7 +123,7 @@
 </header>
 <main
   class="grid grid-cols-1 justify-center mt-10 pb-12 px-4 gap-3
-  sm:grid-cols-[auto_1fr] sm:grid-rows-[auto_1fr]
+   sm:max-lg:items-start sm:grid-cols-[auto_1fr] sm:grid-rows-[auto_1fr]
   lg:gap-6 lg:max-xl:grid-cols-[1fr_auto] 2xl:grid-cols-[auto_auto]"
 >
   <!--  Title Section -->
@@ -186,14 +186,14 @@
   </section>
   <!--  Info, size and buttons section -->
   <section
-    class="flex flex-col gap-6 max-w-96 justify-self-center
+    class="flex flex-col gap-6 max-w-96 justify-self-center sm:max-lg:sticky sm:max-lg:top-5
   sm:order-3 sm:justify-self-start"
   >
     <!--    Choose color -->
     <div class="flex gap-2">
       <button
         id="white-color"
-        class="cursor-pointer active-color"
+        class="cursor-pointer active-color "
         type="button"
         aria-label="Choose white color"
       >
@@ -238,15 +238,15 @@
     </section>
     <section class="flex flex-col gap-2">
       <button
-        class="button bg-(--black-button) text-white"
+        class="button bg-(--black-button) text-white active:animate-wiggle"
         type="button"
         aria-label="Add to Bag"
       >
-        Add to Bag
+        <span>Add to Bag</span>
       </button>
       <button
         id="button__favorite"
-        class="button flex justify-center relative gap-1 items-center"
+        class="button flex justify-center relative gap-1 items-center active:animate-wiggle"
         type="button"
         aria-label="Add to Favorite"
       >
