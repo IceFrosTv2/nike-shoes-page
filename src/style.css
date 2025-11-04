@@ -53,6 +53,13 @@
   --size-border: #C1C1C1;
   --black-button: #111;
   --background-mobile-menu: rgba(179, 179, 179, 0.50);
+
+  --animate-wiggle: wiggle 0.3s;
+  @keyframes wiggle {
+    100% {
+      scale: 0.9;
+    }
+  }
 }
 
 @layer utilities {
